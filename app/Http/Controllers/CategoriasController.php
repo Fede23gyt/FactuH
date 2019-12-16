@@ -44,4 +44,10 @@ class CategoriasController extends Controller
     {
         //
     }
+
+    public function ver($id)
+    {
+        $categoria = Categorias::find($id);
+        
+    }
 }

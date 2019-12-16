@@ -25,11 +25,6 @@ class MarcasController extends Controller
         return redirect()->route('marcas');
     }
 
-    public function ver($id)
-    {
-        //
-    }
-
     public function editar($id)
     {
         //
@@ -43,5 +38,11 @@ class MarcasController extends Controller
     public function eliminar($id)
     {
         //
+    }
+
+    public function ver($id)
+    {
+        $marca = Marcas::find($id);
+        
     }
 }

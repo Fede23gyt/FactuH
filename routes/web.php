@@ -25,6 +25,7 @@ Route::get('categorias', 'CategoriasController@index')->name('categorias');
 Route::POST('categorias/editar','CategoriasController@modificar')->name('editar_categoria');
 
 Route::POST('categorias/eliminar','CategoriasController@eliminar')->name('eliminar_categoria');
+Route::GET('categorias/ver','CategoriasController@ver')->name('ver_categ');
 
 
 
@@ -39,6 +40,7 @@ Route::get('marcas', 'MarcasController@index')->name('marcas');
 Route::POST('marcas/editar','MarcasController@modificar')->name('editar_marca');
 
 Route::POST('marcas/eliminar','MarcasController@eliminar')->name('eliminar_marca');
+Route::GET('marcas/ver','MarcasController@ver')->name('ver_marca');
 
 /* PROVEEDORES */
 Route::get('provee/crear', 'ProveeController@nuevo')->name('nuevo_provee');
