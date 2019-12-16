@@ -71,13 +71,14 @@
         </div>
         <div class="modal-body">
           <form action={{route('ver_marca', $marca->id)}} class="form-horizontal" id="form-general" method="GET">
-          <div class="form-group">
-            <label for="descripcion" class="col-sm-2 control-label">Descripcion</label>
-            <div class="col-sm-8">
-              <input type="text" name="descripcion" class="form-control" id="domicilio" value="{{$marca->descripcion}}" disabled>
+            <div class="form-group">
+              <label for="descripcion" class="col-sm-2 control-label">Descripcion</label>
+              <div class="col-sm-8">
+                <input type="text" name="descripcion" class="form-control" id="descripcion" 
+                      value="{{$marca->descripcion}}" disabled>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cerrar</button>
