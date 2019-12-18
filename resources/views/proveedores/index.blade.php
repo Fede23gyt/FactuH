@@ -50,8 +50,10 @@
                   <td>
                       <a href="{{ route('editar_provee', $proveedor->id) }}" class="btn btn-warning">Modificar</a>
                       <a href="{{ route('eliminar_provee', $proveedor->id) }}" class="btn btn-danger">Eliminar</a>
-                      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
-                            Ver</button>
+                      <a href="{{ route('ver_provee', $proveedor->id) }}" class="btn btn-info>Ver</a>
+                        data-toggle="modal" data-target="#modal-info">Ver</a>
+                      <!--<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
+                            Ver</button>-->
                   </td>
 
                 </tr>
@@ -74,37 +76,38 @@
           <h4 class="modal-title">Datos Proveedor</h4>
         </div>
         <div class="modal-body">
-          <form action={{route('ver_provee', $proveedor->id)}} class="form-horizontal" id="form-general" method="GET">
-          <div class="form-group">
-            <label for="nombre" class="col-sm-2 control-label">Nombre</label>
-            <div class="col-sm-8">
-              <input type="text" name="nombre" class="form-control" id="nombre" value="{{$proveedor->nombre}}" disabled>
-            </div><br>
-          </div>
-          <div class="form-group">
-            <label for="domicilio" class="col-sm-2 control-label">Domicilio</label>
-            <div class="col-sm-8">
-              <input type="text" name="domicilio" class="form-control" id="domicilio" value="{{$proveedor->domicilio}}" disabled>
+          <form action={{route('ver_provee', $proveedor->id)}} class="form-horizontal" id="form-modal" method="GET">
+            <div class="form-group">
+              <label for="nombre" class="col-sm-2 control-label">Nombre</label>
+              <div class="col-sm-8">
+                <input type="text" name="nombre" class="form-control" id="nombre" value="{{$proveedor->nombre}}" disabled>
+              </div><br>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="cuit" class="col-sm-2 control-label">CUIT</label>
-            <div class="col-sm-4">
-              <input type="text" name="cuit" class="form-control" id="cuit_f" value="{{$proveedor->cuit}}" disabled>
+            <div class="form-group">
+              <label for="domicilio" class="col-sm-2 control-label">Domicilio</label>
+              <div class="col-sm-8">
+                <input type="text" name="domicilio" class="form-control" id="domicilio" value="{{$proveedor->domicilio}}" disabled>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="telefono" class="col-sm-2 control-label">Telefono</label>
-            <div class="col-sm-4">
-              <input type="text" name="telefono" class="form-control" id="telefono" value="{{$proveedor->telefono}}" disabled>
+            <div class="form-group">
+              <label for="cuit" class="col-sm-2 control-label">CUIT</label>
+              <div class="col-sm-4">
+                <input type="text" name="cuit" class="form-control" id="cuit_f" value="{{$proveedor->cuit}}" disabled>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="mail" class="col-sm-2 control-label">Mail</label>
-            <div class="col-sm-5">
-              <input type="mail" name="mail" class="form-control" id="mail" value="{{$proveedor->mail}}" disabled>
+            <div class="form-group">
+              <label for="telefono" class="col-sm-2 control-label">Telefono</label>
+              <div class="col-sm-4">
+                <input type="text" name="telefono" class="form-control" id="telefono" value="{{$proveedor->telefono}}" disabled>
+              </div>
             </div>
-          </div>
+            <div class="form-group">
+              <label for="mail" class="col-sm-2 control-label">Mail</label>
+              <div class="col-sm-5">
+                <input type="mail" name="mail" class="form-control" id="mail" value="{{$proveedor->mail}}" disabled>
+              </div>
+            </div>
+
         </form>
         </div>
         <div class="modal-footer">
@@ -117,4 +120,3 @@
   </div>
   <!-- /.modal -->
 @endsection
-

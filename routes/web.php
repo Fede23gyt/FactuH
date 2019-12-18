@@ -45,10 +45,7 @@ Route::GET('marcas/ver','MarcasController@ver')->name('ver_marca');
 /* PROVEEDORES */
 Route::get('provee/crear', 'ProveeController@nuevo')->name('nuevo_provee');
 Route::post('provee', 'ProveeController@grabar')->name('guardar_provee');
-
 Route::get('provee', 'ProveeController@index')->name('provee');
-
-Route::POST('provee/editar','ProveeController@modificar')->name('editar_provee');
-
-Route::GET('provee/ver','ProveeController@ver')->name('ver_provee');
+Route::PUT('provee/editar','ProveeController@modificar')->name('editar_provee');
+Route::GET('provee/ver/{id}','ProveeController@ver')->name('ver_provee');
 Route::POST('provee/eliminar','ProveeController@eliminar')->name('eliminar_provee');
